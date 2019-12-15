@@ -15,7 +15,7 @@ h1 {
 }
 
 .landing-page__jumbotron img{
-  width: 6rem;
+  width: 5rem;
 }
 
 .landing-page__jumbotron {
@@ -27,6 +27,7 @@ h1 {
 
   text-align: center;
   transform: translate(-50%, -50%);
+  width: 100%;
 
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 3s; /* Firefox < 16 */
