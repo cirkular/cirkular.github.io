@@ -35,23 +35,26 @@ body {
   font-family: concert-one, Helvetica, sans-serif;
   font-size: 5rem;
   font-weight: 300;
-  margin: 0;
-  padding: 0.5rem;
+  margin: 1rem;
 }
 
-.landing_jumbotron {
+.landing {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 400px;
   justify-content: center;
-  text-align: center;
 
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 3s; /* Firefox < 16 */
   -ms-animation: fadein 3s; /* Internet Explorer */
   -o-animation: fadein 3s; /* Opera < 12.1 */
   animation: fadein 3s;
+}
+
+.landing_jumbotron {
+  text-align: center;
+  display: contents;
 }
 
 .landing_jumbotron img {
@@ -61,7 +64,7 @@ body {
 .landing_jumbotron p {
   font-size: 0.75rem;
   margin: 0;
-  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 .forest {
