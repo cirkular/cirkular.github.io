@@ -5,22 +5,30 @@
 
 .about {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1.5rem;
-  padding: 24px;
-  margin: auto;
-  max-width: 1024px;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .about-content {
   flex-basis: 100%;
-  padding: 24px;
+}
+
+.about-content-box {
+  height: 150px;
+  width: 100%;
+  background-color: #cecece;
+}
+
+.about-content p {
+  margin: auto;
+  padding: 1rem;
 }
 
 body {
   font-family: Helvetica, sans-serif;
   font-weight: 100;
   margin: 0;
+  text-align: justify;
 }
 
 .landing_jumbotron h1 {
@@ -28,6 +36,7 @@ body {
   font-size: 5rem;
   font-weight: 300;
   margin: 0;
+  padding: 0.5rem;
 }
 
 .landing_jumbotron {
@@ -51,6 +60,8 @@ body {
 
 .landing_jumbotron p {
   font-size: 0.75rem;
+  margin: 0;
+  padding: 0.5rem;
 }
 
 .forest {
@@ -59,8 +70,25 @@ body {
   background-repeat: no-repeat;
 }
 
+.network-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  justify-content: center;
+  grid-gap: 1rem;
+  text-align: center;
+}
+
+.who-we-are h2,
+.network h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 footer {
-  color:white;
+  color: white;
   font-size: 0.75rem;
   position: relative;
   height: 25vh;
@@ -88,6 +116,12 @@ footer .footer__left {
 
 footer .footer__right {
   right: 2rem;
+}
+
+section {
+  padding: 24px;
+  margin: auto;
+  max-width: 1024px;
 }
 
 @media only screen and (min-width: 600px) {
