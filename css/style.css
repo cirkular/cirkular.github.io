@@ -42,7 +42,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 100vh;
   justify-content: center;
 
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
@@ -52,9 +52,18 @@ body {
   animation: fadein 3s;
 }
 
+#hero::after {
+  content: '';
+  background-color: rgba(255,255,255,0.7);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+}
+
 .landing_jumbotron {
+  position: absolute;
   text-align: center;
-  display: contents;
 }
 
 .landing_jumbotron img {
@@ -65,12 +74,6 @@ body {
   font-size: 0.75rem;
   margin: 0;
   margin: 0.5rem;
-}
-
-.forest {
-  background-image: url("../img/forest-footer.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .network-grid {
@@ -91,10 +94,11 @@ body {
 }
 
 footer {
+  background-color: #cecece;
   color: white;
   font-size: 0.75rem;
   position: relative;
-  height: 25vh;
+  height: 100px;
   width: 100%;
 }
 
@@ -134,10 +138,6 @@ section {
 
   .landing_jumbotron p {
     font-size: 1rem;
-  }
-
-  footer {
-    height: 30vh;
   }
 }
 
