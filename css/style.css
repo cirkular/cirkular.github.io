@@ -115,16 +115,23 @@ h1, h2, h3 {
 
 .network {
   background-color: #c4d0db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .network-grid {
   font-weight: bold;
-  display: grid;
+  display: inline-grid;
+  display: -moz-inline-grid;
+  display: -ms-inline-grid;
   grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
   align-items: center;
   grid-gap: 1rem;
   text-align: center;
   justify-items: center;
+  max-width: 512px;
+  padding: 0.5rem;
 }
 
 .network-grid.bottom-partners {
@@ -196,6 +203,10 @@ section.footer{
 
   .about .content {
     margin: 2rem 0;
+  }
+
+  .network {
+    flex-direction: column;
   }
 }
 
