@@ -15,7 +15,7 @@
 
 .about {
   display: flex;
-  padding: 3rem 1rem;
+  padding: 8rem 1rem 4rem 1rem;
 }
 
 .about .content {
@@ -29,27 +29,12 @@
 }
 
 .about .content p {
-  margin: 0.25rem 0 0 0;
+  margin: 0.25rem 0 0;
 }
 
 .about .content img {
   margin-right: 1rem;
   max-width: 50px;
-}
-
-.about-content {
-  flex-basis: 100%;
-}
-
-.about-content-box {
-  height: 150px;
-  width: 100%;
-  background-color: #cecece;
-}
-
-.about-content p {
-  margin: auto;
-  padding: 1rem;
 }
 
 body {
@@ -63,14 +48,16 @@ h1, h2, h3 {
   font-size: 1.25rem;
 }
 
-.landing_jumbotron h1 {
+.landing h1 {
+  position: absolute;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: inter-bold, Helvetica, sans-serif;
   font-size: 4rem;
-  margin: 1rem;
 }
 
 .landing {
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,72 +72,28 @@ h1, h2, h3 {
   animation: fadein 3s;
 }
 
-#hero {
-  height: 100%;
-}
-
-#hero::after {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 100vw;
-  height: 75vh;
-  position: absolute;
-  left: 0;
-}
-
-.landing_jumbotron {
-  position: absolute;
-  text-align: center;
-}
-
-.landing_jumbotron img {
-  width: 6rem;
-}
-
-.landing_jumbotron p {
-  font-size: 0.75rem;
-  margin: 0;
-  margin: 0.5rem;
+canvas {
+  background-color: #39796b;
 }
 
 .network {
-  background-color: #c4d0db;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .network-grid {
-  font-weight: bold;
-  display: inline-grid;
-  display: -moz-inline-grid;
-  display: -ms-inline-grid;
-  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  display: flex;
   align-items: center;
-  grid-gap: 1rem;
-  text-align: center;
-  justify-items: center;
-  max-width: 512px;
-  padding: 0.5rem;
-}
-
-.network-grid.bottom-partners {
   font-weight: bold;
-}
-
-.who-we-are {
-  background-color: #c4d0db;
-  color: white;
-  font-size: small;
-}
-
-.who-we-are h1 {
-  font-size: medium;
-}
-
-.who-we-are h2, .network h2 {
+  justify-content: space-around;
   text-align: center;
-  margin: 0;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.network-grid p {
+  max-width: 100px;
 }
 
 .network img {
@@ -158,10 +101,9 @@ h1, h2, h3 {
 }
 
 footer {
-  background-color: #c4d0db;
+  background-color: #39796b;
   font-size: 0.75rem;
-  margin: auto;
-  width: 100%;
+  padding: 1rem;
 }
 
 footer a {
@@ -169,15 +111,9 @@ footer a {
   text-decoration: none;
 }
 
-footer a>* {
-  display: inline;
-  vertical-align: text-bottom;
-}
-
 footer .contact {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0 0 0;
 }
 
 footer .contact span {
@@ -187,35 +123,34 @@ footer .contact span {
   flex-direction: column;
 }
 
-section {
+.max-width {
   margin: auto;
   max-width: 1024px;
 }
 
-section.footer{
-  padding: 1rem;
+.partners {
+  padding: 4rem 1rem 8rem 1rem;
 }
 
 @media only screen and (max-width: 650px) {
   .about {
     flex-direction: column;
+    padding: 4rem 1rem 2rem 1rem;
   }
-
   .about .content {
     margin: 2rem 0;
   }
-
   .network {
     flex-direction: column;
+  }
+  .partners { 
+    padding: 2rem 1rem 4rem 1rem;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .landing_jumbotron h1 {
+  .landing h1 {
     font-size: 7rem;
-  }
-  .landing_jumbotron p {
-    font-size: 1rem;
   }
 }
 

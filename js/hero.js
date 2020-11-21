@@ -29,7 +29,7 @@ animate();
 
 function init() {
 
-    container = document.getElementById('hero');
+    container = document.getElementById('landing');
 
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 4000);
     camera.position.z = 400;
@@ -40,22 +40,16 @@ function init() {
     group = new THREE.Group();
     scene.add(group);
 
-    // const helper = new THREE.BoxHelper(new THREE.Mesh(new THREE.BoxBufferGeometry(r, r, r)));
-    // helper.material.color.setHex(0x101010);
-    // helper.material.blending = THREE.AdditiveBlending;
-    // helper.material.transparent = true;
-    // group.add(helper);
-
     const segments = maxParticleCount * maxParticleCount;
 
     positions = new Float32Array(segments * 3);
     colors = new Float32Array(segments * 3);
 
     const pMaterial = new THREE.PointsMaterial({
-        color: 0x000000,
-        size: 3,
+        color: 0xc4d0db,
+        size: 2,
         blending: THREE.AdditiveBlending,
-        transparent: true,
+        transparent: false,
         sizeAttenuation: false
     });
 
@@ -97,9 +91,10 @@ function init() {
     geometry.setDrawRange(0, 0);
 
     const material = new THREE.LineBasicMaterial({
-        vertexColors: true,
+        color: 0x004d40,
+        vertexColors: false,
         blending: THREE.AdditiveBlending,
-        transparent: true
+        transparent: false
     });
 
     linesMesh = new THREE.LineSegments(geometry, material);
