@@ -13,97 +13,28 @@
   src: url(../fonts/Inter-ExtraBold-slnt=0.ttf);
 }
 
-.about h1{
-  font-size: small;
-}
-
-.about h2{
-  font-size: x-large;
-}
-
-.about-header {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.about .grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 6px;
-  font-size: small;
-}
-
-.about .grid-container h3 {
-  font-size: small;
-}
-
-.grid-item-container .img {
-  height: 45vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.grid-item-container {
-    display: grid;
-}
-
-.grid-left {
-  display: grid;
-  grid-column-start: 2;
-  grid-column-end: 8;
-}
-
-.grid-right {
+.about {
   display: flex;
-  grid-column-start: 8;
-  grid-column-end: 12;
-  justify-content: center;
-  align-items: center;
+  padding: 3rem 1rem;
 }
 
-.grid-item-container.sustainably .img {
-  background-image: url('../img/microscopic.jpg');
-  grid-column-start: 1;
-  grid-column-end: 7;
-}
-.grid-item-container.sustainably .text {
-  grid-column-start: 1;
-  grid-column-end: 7;
+.about .content {
+  align-items: end;
+  display: flex;
+  margin: 0 1rem;
 }
 
-.grid-item-container {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.grid-item-container.innovation .img {
-  background-image: url('../img/glass.jpg');
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
-
-.grid-item-container.innovation h3{
+.about .content h2 {
   margin: 0;
 }
 
-.grid-item-container.innovation .text {
-  grid-column-start: 5;
-  grid-column-end: 7;
-  padding: 0 12px;
+.about .content p {
+  margin: 0.25rem 0 0 0;
 }
 
-.grid-item-container.tech {
-  margin-top: 20%;
-}
-
-.grid-item-container.tech .img {
-  background-image: url('../img/cheese.jpg');
-  grid-column-start: 2;
-  grid-column-end: 6;
-}
-
-.grid-item-container.tech .text {
-  grid-column-start: 2;
-  grid-column-end: 6;
+.about .content img {
+  margin-right: 1rem;
+  max-width: 50px;
 }
 
 .about-content {
@@ -127,10 +58,14 @@ body {
   margin: 0;
 }
 
+h1, h2, h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
 .landing_jumbotron h1 {
-  font-family: inter-extra-bold, Helvetica, sans-serif;
+  font-family: inter-bold, Helvetica, sans-serif;
   font-size: 4rem;
-  font-weight: 300;
   margin: 1rem;
 }
 
@@ -138,21 +73,27 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: center;
-
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 3s; /* Firefox < 16 */
-  -ms-animation: fadein 3s; /* Internet Explorer */
-  -o-animation: fadein 3s; /* Opera < 12.1 */
+  -webkit-animation: fadein 3s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 3s;
+  /* Internet Explorer */
+  -o-animation: fadein 3s;
+  /* Opera < 12.1 */
   animation: fadein 3s;
+}
+
+#hero {
+  height: 100%;
 }
 
 #hero::after {
   content: '';
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   width: 100vw;
-  height: 100vh;
+  height: 75vh;
   position: absolute;
   left: 0;
 }
@@ -200,9 +141,9 @@ body {
   font-size: medium;
 }
 
-.who-we-are h2,
-.network h2 {
+.who-we-are h2, .network h2 {
   text-align: center;
+  margin: 0;
 }
 
 .network img {
@@ -211,13 +152,8 @@ body {
 
 footer {
   background-color: #c4d0db;
-  color: white;
   font-size: 0.75rem;
-  position: relative;
-  /* padding: 0 24px; */
-  /* max-width: 1024px; */
   margin: auto;
-  height: 50px;
   width: 100%;
 }
 
@@ -226,92 +162,40 @@ footer a {
   text-decoration: none;
 }
 
-footer a > * {
+footer a>* {
   display: inline;
   vertical-align: text-bottom;
 }
 
-footer > * {
-  bottom: 2rem;
-  position: absolute;
+footer .contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 0 0;
 }
 
-footer .footer__left {
-  left: 2rem;
-}
-
-footer .footer__right {
-  right: 2rem;
+footer .contact span {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 section {
-  padding: 24px;
   margin: auto;
-  /* max-width: 1024px; */
+  max-width: 1024px;
 }
 
-@media only screen and (max-width: 600px) {
-  .about-header {
-    margin-top: 50px;
-    margin-bottom: 20px;
+section.footer{
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .about {
+    flex-direction: column;
   }
 
-  footer {
-    padding: 0;
-  }
-
-  .grid-left {
-    grid-column-start: 1;
-    grid-column-end: 13;
-  }
-
-  .grid-right {
-    grid-column-start: 1;
-    grid-column-end: 13;
-  }
-
-  .grid-item-container.tech .text, .grid-item-container.innovation .img,
-  .grid-item-container.innovation .text, .grid-item-container.tech .img {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    padding: 0;
-  }
-
-  .grid-item-container.tech {
-    margin-top: 0;
-    grid-template-areas:
-    "image image image image image image"
-    "text text text text text text";
-  }
-
-  .grid-item-container {
-    margin-bottom: 20px;
-  }
-
-  .grid-item-container.tech .text {
-    grid-area: text;
-  }
-
-  .grid-item-container.tech .image {
-    grid-area: image;
-  }
-
-  .grid-item-container.innovation h3, .grid-item-container h3 {
-    margin-bottom: 0px;
-    margin-top: 10px;
-  }
-
-  .grid-item-container.innovation p, .grid-item-container p {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-
-  .network img {
-    width: 50px;
-  }
-
-  .network-grid.bottom-partners p{
-    font-size: x-small;
+  .about .content {
+    margin: 2rem 0;
   }
 }
 
@@ -319,7 +203,6 @@ section {
   .landing_jumbotron h1 {
     font-size: 7rem;
   }
-
   .landing_jumbotron p {
     font-size: 1rem;
   }
@@ -335,6 +218,7 @@ section {
 }
 
 /* Firefox < 16 */
+
 @-moz-keyframes fadein {
   from {
     opacity: 0;
@@ -345,6 +229,7 @@ section {
 }
 
 /* Safari, Chrome and Opera > 12.1 */
+
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -355,6 +240,7 @@ section {
 }
 
 /* Internet Explorer */
+
 @-ms-keyframes fadein {
   from {
     opacity: 0;
@@ -365,6 +251,7 @@ section {
 }
 
 /* Opera < 12.1 */
+
 @-o-keyframes fadein {
   from {
     opacity: 0;

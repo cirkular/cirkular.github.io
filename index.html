@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<script type="module" src="./js/hero.js" defer></script>
 
 <head>
   <meta charset="utf-8" />
@@ -9,72 +10,60 @@
 </head>
 
 <body>
-  <div class="landing">
+  <section class="landing">
     <div id="hero"></div>
     <div class="landing_jumbotron">
       <h1>Cirkulär</h1>
       <p>Your favorite cheese, sustainably sourced</p>
     </div>
-  </div>
-  <!-- <section class="about">
-    <div class="about-header">
-      <h1>what we do</h1>
-      <h2>Your favorite cheese, sustainably sourced</h2>
-    </div>
-    <div class="grid-container">
-      <div class="grid-left">
-        <div class="grid-item-container innovation">
-          <div class="img"></div>
-          <div class="text">
-            <h3>Innovation</h3>
-            <p>Cirkulär is developing a customizable ingredient platform for the dairy industry and food innovators
-              alike</p>
-          </div>
-        </div>
-        <div class="grid-item-container tech">
-          <div class="text">
-            <h3>Food technology</h3>
-            <p>
-              A radically new approach to cheese production by engineering microbial strains to produce the key
-              ingredients in cheese</p>
-          </div>
-          <div class="img">
-          </div>
-        </div>
-      </div>
-      <div class="grid-right">
-        <div class="grid-item-container sustainably">
-          <div class="img">
-          </div>
-          <div class="text">
-            <h3>Sustainability</h3>
-            <p>
-              The products enable the production and enjoyment of the myriad of different cheeses that exist in the
-              world, in a sustainable way.</p>
-          </div>
-        </div>
+  </section>
+  <section class="about">
+    <div class="content">
+      <img src="./img/rocket.svg" alt="innovation">
+      <div class="text">
+        <h2>Innovation</h2>
+        <p>Cirkulär is developing a customizable ingredient platform for the dairy industry and food innovators
+          alike</p>
       </div>
     </div>
-  </section> -->
-  <section class="network">
-    <h2>Partnerships & Network</h2>
-    <div class="">
-      <div class="network-grid">
-        <img src="./img/Almi_Logo_svart.png" alt="almi logo">
-        <p>CHALMERS</p>
-        <img src="./img/vinnova.png" alt="vinnova logo">
-        <p>Lunds University</p>
-        <img src="./img/sten_k_johnsson.png" alt="sten k johnsson logo">
+    <div class="content">
+      <img src="./img/cheese.svg" alt="cheese">
+      <div class="text">
+        <h2>Food technology</h2>
+        <p>
+          A radically new approach to cheese production by engineering microbial strains to produce the key
+          ingredients in cheese</p>
+      </div>
+    </div>
+    <div class="content">
+      <img src="./img/earth.svg" alt="sustainably">
+      <div class="text">
+        <h2>Sustainability</h2>
+        <p>
+          The products enable the production and enjoyment of the myriad of different cheeses that exist in the
+          world, in a sustainable way.</p>
       </div>
     </div>
   </section>
   <footer>
-    <span class="footer__left">© Cirkulär AB 2020</span>
-    <a class="footer__right" href="mailto:info@cirkular.org ">
-      <img src="img/mail-icon.svg" alt="mail-icon" />
-    </a>
+    <section class="footer">
+      <div class="network">
+        <div class="network-grid">
+          <img src="./img/Almi_Logo_svart.png" alt="almi logo">
+          <p>CHALMERS</p>
+          <img src="./img/vinnova.png" alt="vinnova logo">
+          <p>Lunds University</p>
+          <img src="./img/sten_k_johnsson.png" alt="sten k johnsson logo">
+        </div>
+      </div>
+      <div class="contact">
+        <span>© Cirkulär AB 2020</span>
+        <a href="mailto:info@cirkular.org ">
+          <img src="img/mail-icon.svg" alt="mail-icon" />
+        </a>
+      </div>
+    </section>
   </footer>
 </body>
-<script type="module" src="./js/hero.js"></script>
 
 </html>
